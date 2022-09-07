@@ -62,13 +62,13 @@
         <ul class="nav navbar-nav">
         {% if user.is_authenticated %}
           <li>
-            <a class="nav-link">ユーザ名：{{ user.get_username }}</a>        
-          </li>     
+            <a class="nav-link">ユーザ名：{{ user.get_username }}</a>
+          </li>
           <li>
             <a class="nav-link" href="{% url 'accounts:logout' %}">
                 <i class="fa fa-fw fa-sign-out"></i>ログアウト</a>
           </li>
-                {% endif %}    
+                {% endif %}
           </li>
         </ul>
       </div>
@@ -91,6 +91,8 @@
                 <ul class="treeview-menu">
                     <li class="active"><a href="{% url 'pdfmr:upload' %}"><i class="fa fa-circle-o"></i> PDFアップロード</a></li>
                     <li><a href="{% url 'pdfmr:list' %}"><i class="fa fa-circle-o"></i> Excel管理画面</a></li>
+                    <li><a href="{% url 'keijiban:kakikomi' %}"><i class="fa fa-circle-o"></i> 港島JW用</a></li>
+
                 </ul>
             </li>
       </ul>
@@ -369,6 +371,4 @@
       }
     }
 </script>
-
-
 </html>

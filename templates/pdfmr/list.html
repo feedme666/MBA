@@ -23,7 +23,7 @@
           <div class="box-body">
             <div class="card-body">
               <hr>
-            <form action='{% url 'pdfmr:dell_file' %}' name="form" method="post"> 
+            <form action='{% url 'pdfmr:dell_file' %}' name="form" method="post">
               {% csrf_token %}
               <label>
                 <input type="checkbox" name="all" onClick="AllChecked();" />全て選択
@@ -31,9 +31,9 @@
               {% for file in file_list %}
               <label>
                 <input type="checkbox" name="checks" value="{{file}}"/>
-                <a href="http://127.0.0.1:8000/media/excel/{{login_user_name}}/{{file}}">{{file}}</a>
+                <a href="http://feedme614.pythonanywhere.com/media/excel/{{login_user_name}}/{{file}}">{{file}}</a>
                 </label>
-                <br> 
+                <br>
                 {% endfor %}
                 <input type="submit" id="button" name="button"  class="btn btn-sm btn-danger" value="削除">
               </form>
